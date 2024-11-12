@@ -298,6 +298,52 @@
 
 
 
+
+                        <div class="border border-secondary rounded-lg my-4 mx-1">
+                            <div class="col-md-12 mt-3">
+                                <h4>{{ __('social_media_links') }}</h4>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <hr class="mt-0">
+                            </div>
+                            <div class="row my-4 mx-1">
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label for="facebook">{{ __('facebook') }}</label>
+                                    <input name="facebook" id="facebook" value="{{ $settings['facebook'] ?? '' }}" type="text" placeholder="{{ __('facebook') }}" class="form-control" />
+                                </div>
+
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label for="instagram">{{ __('instagram') }}</label>
+                                    <input name="instagram" id="instagram" value="{{ $settings['instagram'] ?? '' }}" type="text" placeholder="{{ __('instagram') }}" class="form-control" />
+                                </div>
+
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label for="linkedin">{{ __('linkedin') }} </label>
+                                    <input name="linkedin" id="linkedin" value="{{ $settings['linkedin'] ?? '' }}" type="text" placeholder="{{ __('linkedin') }}" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border border-secondary rounded-lg my-4 mx-1">
+                            <div class="col-md-12 mt-3">
+                                <h4>{{ __('Footer Settings') }}</h4>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <hr class="mt-0">
+                            </div>
+                            <div class="row my-4 mx-1">
+                                <div class="form-group col-sm-12 col-md-12">
+                                    <label for="">{{ __('short_description') }}</label>
+                                    <textarea name="short_description" class="form-control" id="short_description" required placeholder="{{__('short_description')}}">{{$settings['short_description'] ?? ''}}</textarea>
+                                </div>
+
+                                <div class="form-group col-sm-12 col-md-12">
+                                    <label for="">{{ __('footer_text') }}</label>
+                                    <textarea id="tinymce_message" name="footer_text" id="footer_text" required placeholder="{{__('footer_text')}}">{{$settings['footer_text'] ?? ''}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <input class="btn btn-theme float-right ml-3" id="create-btn" type="submit" value={{ __('submit') }}>
                         <input class="btn btn-secondary float-right" type="reset" value={{ __('reset') }}>
                     </form>
