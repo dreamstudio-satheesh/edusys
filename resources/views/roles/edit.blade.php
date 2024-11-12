@@ -35,7 +35,7 @@
                                     <div class="form-group col-lg-3 col-sm-12 col-xs-12 col-md-3">
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                                {{ Form::checkbox('permission[]', $value->id, in_array($value->id, $rolePermissions), ['class' => 'name form-check-input']) }}
+                                            <input type="checkbox" name="permission[]" value="{{ $value->id }}" class="name form-check-input" {{ in_array($value->id, $rolePermissions) ? 'checked' : '' }}>
                                                 {{ $value->name }}
                                             </label>
                                         </div>
