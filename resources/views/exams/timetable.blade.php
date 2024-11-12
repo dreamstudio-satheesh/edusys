@@ -25,13 +25,13 @@
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label>{{ __('exam') }} </label>
-                                        {!! Form::hidden('semester_id', $exam->semester_id ?? null) !!}
-                                        {!! Form::hidden('session_year_id', $exam->session_year_id) !!}
-                                        {!! Form::text('', $exam->name, ['readonly' => true ,'class' => 'form-control']) !!}
+                                        <input type="hidden" name="semester_id" value="{{ old('semester_id', $exam->semester_id ?? null) }}">
+                                        <input type="hidden" name="session_year_id" value="{{ old('session_year_id', $exam->session_year_id) }}">
+                                        <input type="text" value="{{ $exam->name }}" class="form-control" readonly>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label>{{ __('Class') }} </label>
-                                        {!! Form::text('', $exam->class->full_name, ['readonly' => true ,'class' => 'form-control']) !!}
+                                        <input type="text" value="{{ $exam->class->full_name }}" class="form-control" readonly>
                                     </div>
                                 </div>
 
@@ -39,7 +39,7 @@
                                     <div data-repeater-list="timetable">
                                         <div data-repeater-item>
                                             <div class="row">
-                                                {!! Form::hidden('id', null, ['class' => 'timetable_id']) !!}
+                                            <input type="hidden" name="id" value="{{ old('id') }}" class="timetable_id">
                                                 <div class="form-group col-md-4">
                                                     <label for="subject_id">{{ __('subject') }} </label>
                                                     <select name="class_subject_id" id="subject_id" class="form-control exam-subjects-options subject" required>
@@ -55,26 +55,26 @@
                                                 </div>
                                                 <div class="form-group col-md-4">
                                                     <label>{{ __('total_marks') }} <span class="text-danger">*</span></label>
-                                                    {!! Form::text('total_marks', null, ['class' => 'total-marks form-control', 'placeholder' => __('total_marks'), 'min' => 1, 'required' , "data-convert" => "number"]) !!}
+                                                    <input type="text" name="total_marks" value="{{ old('total_marks') }}" class="total-marks form-control" placeholder="{{ __('total_marks') }}" min="1" required data-convert="number">
                                                 </div>
                                                 <div class="form-group col-md-4">
                                                     <label>{{ __('passing_marks') }} <span class="text-danger">*</span></label>
-                                                    {!! Form::text('passing_marks', null, ['class' => 'passing-marks form-control', 'placeholder' => __('passing_marks'), 'min' => 1, 'required', "data-convert" => "number"]) !!}
+                                                    <input type="text" name="passing_marks" value="{{ old('passing_marks') }}" class="passing-marks form-control" placeholder="{{ __('passing_marks') }}" min="1" required data-convert="number">
                                                 </div>
                                             </div>
 
                                             <div class="row">
                                                 <div class="form-group col-md-4">
                                                     <label>{{ __('start_time') }} <span class="text-danger">*</span></label>
-                                                    {!! Form::text('start_time', null, ['class' => 'start-time form-control', 'placeholder' => __('start_time'), 'autocomplete' => 'off', 'required' , "data-convert" => "time"]) !!}
+                                                    <input type="text" name="start_time" value="{{ old('start_time') }}" class="start-time form-control" placeholder="{{ __('start_time') }}" autocomplete="off" required data-convert="time">
                                                 </div>
                                                 <div class="form-group col-md-4">
                                                     <label>{{ __('end_time') }} <span class="text-danger">*</span></label>
-                                                    {!! Form::text('end_time', null, ['class' => 'end-time form-control', 'placeholder' => __('end_time'), 'autocomplete' => 'off', 'required' , "data-convert" => "time"]) !!}
+                                                    <input type="text" name="end_time" value="{{ old('end_time') }}" class="end-time form-control" placeholder="{{ __('end_time') }}" autocomplete="off" required data-convert="time">
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <label>{{ __('date') }} <span class="text-danger">*</span></label>
-                                                    {!! Form::text('date', null, ['class' => 'timetable-date form-control', 'placeholder' => __('date'), 'required']) !!}
+                                                    <input type="text" name="date" value="{{ old('date') }}" class="timetable-date form-control" placeholder="{{ __('date') }}" required>
                                                 </div>
                                                 <div class="form-group col-md-1 pl-0 mt-4" data-repeater-delete>
                                                     <button type="button" {{ $disabled }} class="btn btn-inverse-danger btn-icon remove-exam-timetable-content">

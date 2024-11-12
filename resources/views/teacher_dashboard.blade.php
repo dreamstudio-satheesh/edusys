@@ -45,7 +45,12 @@
                                     <h3 class="card-title">{{ __('leaves') }}</h3>
                                 </div>
                                 <div class="col-md-6 dropdown text-right">
-                                    {!! Form::select('leave_filter', ['Today' => __('today'), 'Tomorrow' => __('tomorrow'), 'Upcoming' => __('upcoming')], 'today', ['class' => 'form-control form-control-sm filter_leaves']) !!}
+                                <select name="leave_filter" class="form-control form-control-sm filter_leaves">
+                                    <option value="Today" {{ old('leave_filter', 'today') == 'Today' ? 'selected' : '' }}>{{ __('today') }}</option>
+                                    <option value="Tomorrow" {{ old('leave_filter') == 'Tomorrow' ? 'selected' : '' }}>{{ __('tomorrow') }}</option>
+                                    <option value="Upcoming" {{ old('leave_filter') == 'Upcoming' ? 'selected' : '' }}>{{ __('upcoming') }}</option>
+                                </select>
+
                                 </div>
                             </div>
         
@@ -139,7 +144,12 @@
                                             <h3 class="card-title">{{ __('attendance') }}</h3>
                                         </div>
                                         <div class="col-sm-12 col-md-6">
-                                            {!! Form::select('class_id', $class_names, null, ['class' => 'form-control form-control-sm class-section-attendance']) !!}
+                                        <select name="class_id" class="form-control form-control-sm class-section-attendance">
+                                            @foreach($class_names as $value => $label)
+                                                <option value="{{ $value }}" {{ old('class_id') == $value ? 'selected' : '' }}>{{ $label }}</option>
+                                            @endforeach
+                                        </select>
+
                                         </div>
                                     </div>
                                     <div id="attendanChart">

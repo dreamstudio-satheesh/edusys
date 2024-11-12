@@ -23,7 +23,7 @@
                             <div class="text-center col-md-10 col-sm-12 col-12">
                                 <h3>{{$classSection->full_name}}</h3>
                                 <input type="hidden" id="class_section_id" value="{{$classSection->id}}"/>
-                                {!! Form::hidden('semester_id', $classSection->class->include_semesters ? $currentSemester->id : null, ['id' => 'semester_id']) !!}
+                                <input type="hidden" name="semester_id" id="semester_id" value="{{ $classSection->class->include_semesters ? $currentSemester->id : '' }}">
 
                             </div>
                         </div>

@@ -24,12 +24,12 @@
                             <div class="row">
                                 <div class="form-group col-md-12 col-lg-6">
                                     <label>{{ __('name') }} <span class="text-danger">*</span></label>
-                                    {!! Form::text('name', null, ['required', 'placeholder' => __('name'), 'class' => 'form-control']) !!}
+                                    <input type="text" name="name" value="{{ old('name') }}" placeholder="{{ __('name') }}" class="form-control" required>
                                 </div>
 
                                 <div class="form-group col-md-12 col-lg-6">
                                     <label>{{ __('description') }} </label>
-                                    {!! Form::textarea('description', null, ['placeholder' => __('description'), 'class' => 'form-control']) !!}
+                                    <textarea name="description" class="form-control" placeholder="{{ __('description') }}">{{ old('description') }}</textarea>
                                 </div>
                             </div>
                             {{-- <input class="btn btn-theme" type="submit" value={{ __('submit') }}> --}}
@@ -91,12 +91,12 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="name">{{__('name')}} <span class="text-danger">*</span></label>
-                                {!! Form::text('edit_name',null,['required','class' => 'form-control edit_name','id' => 'edit_name','placeholder' => __('name')]) !!}
+                                <input type="text" name="edit_name" id="edit_name" value="{{ old('edit_name') }}" class="form-control edit_name" placeholder="{{ __('name') }}" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="name">{{__('description')}} </label>
-                                {!! Form::textarea('edit_description',null,array('class'=>'form-control edit_description','id'=>'edit_description','placeholder'=>__('description'))) !!}
+                                <textarea name="edit_description" id="edit_description" class="form-control edit_description" placeholder="{{ __('description') }}">{{ old('edit_description') }}</textarea>
                             </div>
                         </div>
                         <div class="modal-footer">

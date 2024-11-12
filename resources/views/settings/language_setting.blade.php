@@ -111,14 +111,14 @@
                         <div class="row">
                             <div class="form-group col-sm-12 col-md-12">
                                 <label>{{ __('language_name') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('name', null, ['required', 'placeholder' => __('language_name'), 'class' => 'form-control', 'id' => 'edit_name']) !!}
+                                <input type="text" name="name" value="{{ old('name') }}" required placeholder="{{ __('language_name') }}" class="form-control" id="edit_name">
 
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-12 col-md-12">
                                 <label>{{ __('language_code') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('code', null, ['required', 'placeholder' => __('language_code'), 'class' => 'form-control', 'id' => 'edit_code']) !!}
+                                <input type="text" name="code" value="{{ old('code') }}" required placeholder="{{ __('language_code') }}" class="form-control" id="edit_code">
 
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-12 col-md-12 mx-1.5">
-                                {!! Form::checkbox('rtl', 1,false, ['id' => 'edit_rtl']) !!}
+                            <input type="checkbox" name="rtl" id="edit_rtl" value="1">
                                 <label for="edit_rtl">{{ __('Is RTL') }}</label>
                             </div>
                         </div>

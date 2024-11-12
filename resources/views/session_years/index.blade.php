@@ -24,19 +24,19 @@
                             <div class="row">
                                 <div class="form-group col-sm-12 col-md-4">
                                     <label>{{ __('name') }} <span class="text-danger">*</span></label>
-                                    {!! Form::text('name', null, ['required', 'placeholder' => __('name'), 'class' => 'form-control']) !!}
+                                    <input type="text" name="name" required placeholder="{{ __('name') }}" class="form-control">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-4">
                                     <label>{{ __('start_date') }} <span class="text-danger">*</span></label>
-                                    {!! Form::text('start_date', null, ['required', 'placeholder' => __('start_date'), 'class' => 'datepicker-popup form-control','autocomplete'=>'off']) !!}
+                                    <input type="text" name="start_date" required placeholder="{{ __('start_date') }}" class="datepicker-popup form-control" autocomplete="off">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-4">
                                     <label>{{ __('end_date') }} <span class="text-danger">*</span></label>
-                                    {!! Form::text('end_date', null, ['required', 'placeholder' => __('end_date'), 'class' => 'datepicker-popup form-control','autocomplete'=>'off']) !!}
+                                    <input type="text" name="end_date" required placeholder="{{ __('end_date') }}" class="datepicker-popup form-control" autocomplete="off">
                                 </div>
                             </div>
                             <input class="btn btn-theme float-right ml-3" id="create-btn" type="submit" value={{ __('submit') }}>
-                                <input class="btn btn-secondary float-right" type="reset" value={{ __('reset') }}>
+                            <input class="btn btn-secondary float-right" type="reset" value={{ __('reset') }}>
                         </form>
                     </div>
                 </div>
@@ -98,15 +98,15 @@
                         <div class="row">
                             <div class="form-group col-12 col-sm-12 col-md-4">
                                 <label>{{ __('name') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('name', null, ['required', 'placeholder' => __('name'), 'class' => 'form-control', 'id' => 'edit-name']) !!}
+                                <input type="text" name="name" required placeholder="{{ __('name') }}" class="form-control" id="edit-name">
                             </div>
                             <div class="form-group col-12 col-sm-12 col-md-4">
                                 <label>{{ __('start_date') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('start_date', null, ['required', 'placeholder' => __('start_date'), 'class' => 'datepicker-popup form-control' , 'id' => 'edit-start-date']) !!}
+                                <input type="text" name="start_date" required placeholder="{{ __('start_date') }}" class="datepicker-popup form-control" id="edit-start-date">
                             </div>
                             <div class="form-group col-12 col-sm-12 col-md-4">
                                 <label>{{ __('end_date') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('end_date', null, ['required', 'placeholder' => __('end_date'), 'class' => 'datepicker-popup form-control' , 'id' => 'edit-end-date']) !!}
+                                <input type="text" name="end_date" required placeholder="{{ __('end_date') }}" class="datepicker-popup form-control" id="edit-end-date">
                             </div>
                         </div>
                     </div>

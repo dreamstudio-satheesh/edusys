@@ -77,13 +77,13 @@
                                         <div class="d-flex">
                                             <div class="form-check form-check-inline">
                                                 <label class="form-check-label">
-                                                    {!! Form::radio('file-upload', 'single') !!}
+                                                <input type="radio" name="file-upload" value="single">
                                                     {{ __('single') }}
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <label class="form-check-label">
-                                                    {!! Form::radio('file-upload', 'multiple') !!}
+                                                <input type="radio" name="file-upload" value="multiple">
                                                     {{ __('multiple') }}
                                                 </label>
                                             </div>
@@ -271,7 +271,7 @@
                                 <option value="file">File Upload</option>
                             </select>
 
-                            {!! Form::hidden('type', "", ['id' => 'edit-type-field-value']) !!}
+                            <input type="hidden" name="type" id="edit-type-field-value" value="{{ old('type') }}">
                         </div>
                         <div class="form-group col-sm-12 col-md-2">
                             <label>{{ __('required') }} </label>

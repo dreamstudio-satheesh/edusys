@@ -21,29 +21,29 @@
                         <div class="row">
                             <div class="form-group col-sm-12 col-md-4">
                                 <label>{{ __('first_name') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('first_name', $userData->first_name, ['required','placeholder' => __('first_name'), 'class' => 'form-control']) !!}
+                                <input type="text" name="first_name" value="{{ old('first_name', $userData->first_name) }}" required placeholder="{{ __('first_name') }}" class="form-control">
                             </div>
                             <div class="form-group col-sm-12 col-md-4">
                                 <label>{{ __('last_name') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('last_name', $userData->last_name, ['required','placeholder' => __('last_name'), 'class' => 'form-control']) !!}
+                                <input type="text" name="last_name" value="{{ old('last_name', $userData->last_name) }}" required placeholder="{{ __('last_name') }}" class="form-control">
 
                             </div>
                             <div class="form-group col-sm-12 col-md-4">
                                 <label>{{ __('mobile') }}</label>
-                                {!! Form::number('mobile', $userData->mobile, ['placeholder' => __('mobile'), 'class' => 'form-control remove-number-increment']) !!}
+                                <input type="number" name="mobile" value="{{ old('mobile', $userData->mobile) }}" placeholder="{{ __('mobile') }}" class="form-control remove-number-increment">
                             </div>
                             <div class="form-group col-sm-12 col-md-12">
                                 <label>{{ __('gender') }} <span class="text-danger">*</span></label><br>
                                 <div class="d-flex">
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                            {!! Form::radio('gender','male',Str::lower($userData->gender) == 'male' ? 'checked':'') !!}
+                                        <input type="radio" name="gender" value="male" {{ Str::lower($userData->gender) == 'male' ? 'checked' : '' }}>
                                             {{ __('male') }}
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                            {!! Form::radio('gender','female', Str::lower($userData->gender) == 'female' ? 'checked':'') !!}
+                                        <input type="radio" name="gender" value="female" {{ Str::lower($userData->gender) == 'female' ? 'checked' : '' }}>
                                             {{ __('female') }}
                                         </label>
                                     </div>
@@ -64,22 +64,22 @@
                             </div>
                             <div class="form-group col-sm-12 col-md-4">
                                 <label>{{ __('dob') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('dob', date('d-m-Y',strtotime($userData->dob)) , ['required','placeholder' => __('dob'), 'class' => 'datepicker-popup-no-future form-control','required' => true]) !!}
+                                <input type="text" name="dob" value="{{ old('dob', date('d-m-Y', strtotime($userData->dob))) }}" required placeholder="{{ __('dob') }}" class="datepicker-popup-no-future form-control">
                                 <span class="input-group-addon input-group-append"></span>
                             </div>
                             <div class="form-group col-sm-12 col-md-4">
                                 <label>{{ __('email') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('email', $userData->email, ['required','placeholder' => __('email'), 'class' => 'form-control']) !!}
+                                <input type="text" name="email" value="{{ old('email', $userData->email) }}" required placeholder="{{ __('email') }}" class="form-control">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-6">
                                 <label>{{ __('current_address') }} <span class="text-danger">*</span></label>
-                                {!! Form::textarea('current_address', $userData->current_address, ['required','placeholder' => __('current_address'), 'class' => 'form-control', 'id' => 'current_address','rows'=>2]) !!}
+                                <textarea name="current_address" id="current_address" rows="2" required placeholder="{{ __('current_address') }}" class="form-control">{{ old('current_address', $userData->current_address) }}</textarea>
                             </div>
                             <div class="form-group col-6">
                                 <label>{{ __('permanent_address') }} <span class="text-danger">*</span></label>
-                                {!! Form::textarea('permanent_address', $userData->permanent_address, ['required','placeholder' => __('permanent_address'), 'class' => 'form-control', 'id' => 'permanent_address','rows'=>2]) !!}
+                                <textarea name="permanent_address" id="permanent_address" rows="2" required placeholder="{{ __('permanent_address') }}" class="form-control">{{ old('permanent_address', $userData->permanent_address) }}</textarea>
                             </div>
                         </div>
                         <input class="btn btn-theme" type="submit" value={{ __('submit') }}>

@@ -23,11 +23,12 @@
                             <div class="row">
                                 <div class="form-group col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                     <label>{{ __('title') }} <span class="text-danger">*</span></label>
-                                    {!! Form::text('title', null, ['required', 'placeholder' => __('title'), 'class' => 'form-control']) !!}
+                                    <input type="text" name="title" value="{{ old('title') }}" required placeholder="{{ __('title') }}" class="form-control">
+
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                     <label>{{ __('description') }}</label>
-                                    {!! Form::textarea('description', null, ['rows' => '2', 'placeholder' => __('description'), 'class' => 'form-control']) !!}
+                                    <textarea name="description" rows="2" placeholder="{{ __('description') }}" class="form-control">{{ old('description') }}</textarea>
                                 </div>
                                 <div class="form-group col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                     <label>{{ __('files') }} </label>
@@ -145,11 +146,11 @@
                         <div class="row">
                             <div class="form-group col-sm-12 col-md-12">
                                 <label>{{ __('title') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('title', null, ['required', 'placeholder' => __('title'), 'class' => 'form-control', 'id' => 'title']) !!}
+                                <input type="text" name="title" id="title" value="{{ old('title') }}" required placeholder="{{ __('title') }}" class="form-control">
                             </div>
                             <div class="form-group col-sm-12 col-md-12">
                                 <label>{{ __('description') }}</label>
-                                {!! Form::textarea('description', null, ['rows' => 2, 'placeholder' => __('description'), 'class' => 'form-control', 'id' => 'description']) !!}
+                                <textarea name="description" id="description" rows="2" placeholder="{{ __('description') }}" class="form-control">{{ old('description') }}</textarea>
                             </div>
 
                             <div class="form-group col-sm-12 col-md-12">

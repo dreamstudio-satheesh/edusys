@@ -32,7 +32,7 @@
 
                                     <div class="form-group col-sm-12 col-md-6 col-lg-4">
                                         <label>{{ __('Name') }} <span class="text-danger">*</span></label>
-                                        {!! Form::text('name', $fees->name, ['placeholder' => __('Name'), 'class' => 'form-control','required']) !!}
+                                        <input type="text" name="name" value="{{ old('name', $fees->name) }}" placeholder="{{ __('Name') }}" class="form-control" required>
                                     </div>
 
                                 </div>
@@ -58,7 +58,7 @@
                                             </div>
 
                                             <div class="form-group col-md-12 col-lg-3">
-                                                {!! Form::text('amount', null, ['class' => 'form-control amount','placeholder' => __('enter').' '.__('fees').' '.__('amount'),'id' => 'amount', 'required' => true, 'min' => 0, "data-convert" => "number"]) !!}
+                                            <input type="text" name="amount" id="amount" value="{{ old('amount') }}" class="form-control amount" placeholder="{{ __('enter') . ' ' . __('fees') . ' ' . __('amount') }}" required min="0" data-convert="number">
                                             </div>
 
                                             <div class="col-md-12 col-lg-1">
@@ -80,15 +80,15 @@
                                     <div class="col-12 row">
                                         <div class="form-group col-sm-12 col-md-6 col-lg-3">
                                             <label>{{ __('due_date')}} <span class="text-danger">*</span></label>
-                                            {{ Form::text('due_date', $fees->due_date, ['id'=>'due_date','class' => 'datepicker-popup form-control', 'placeholder' => __('due_date'), 'required','autocomplete'=>'off']) }}
+                                            <input type="text" name="due_date" id="due_date" value="{{ old('due_date', $fees->due_date) }}" class="datepicker-popup form-control" placeholder="{{ __('due_date') }}" required autocomplete="off">
                                         </div>
                                         <div class="form-group col-sm-12 col-md-6 col-lg-3">
                                             <label>{{ __('due_charges')}} <span class="text-danger">*</span> <span class="text-info small">( {{__('in_percentage')}} )</span></label>
-                                            {{ Form::number('due_charges_percentage', $fees->due_charges, ['id'=>'due_charges_percentage','class' => 'form-control', 'placeholder' => __('due_charges'), 'required', 'min' => 0]) }}
+                                            <input type="number" name="due_charges_percentage" id="due_charges_percentage" value="{{ old('due_charges_percentage', $fees->due_charges) }}" class="form-control" placeholder="{{ __('due_charges') }}" required min="0">
                                         </div>
                                         <div class="form-group col-sm-12 col-md-6 col-lg-3">
                                             <label>{{ __('due_charges')}} <span class="text-danger">*</span> <span class="text-info small">( {{__('Amount')}} )</span></label>
-                                            {{ Form::number('due_charges_amount', $fees->due_charges_amount, ['id'=>'due_charges_amount','class' => 'form-control', 'placeholder' => __('due_charges'), 'required', 'min' => 0]) }}
+                                            <input type="number" name="due_charges_amount" id="due_charges_amount" value="{{ old('due_charges_amount', $fees->due_charges_amount) }}" class="form-control" placeholder="{{ __('due_charges') }}" required min="0">
                                         </div>
                                     </div>
                                 </div>
@@ -127,18 +127,18 @@
                                             <input type="hidden" name="id" class="installment_id"/>
                                             <div class="form-group col-lg-12 col-xl-3">
                                                 <label>{{ __('installment_name') }} <span class="text-danger">*</span></label>
-                                                {{ Form::text('name', null, ['class' => 'form-control installment-name', 'placeholder' => __('installment') . ' ' . __('name'), 'required']) }}
+                                                <input type="text" name="name" value="{{ old('name') }}" class="form-control installment-name" placeholder="{{ __('installment') . ' ' . __('name') }}" required>
                                             </div>
                                             <div class="form-group col-lg-12 col-xl-3">
                                                 <label>{{ __('due_date') }} <span class="text-danger">*</span></label>
-                                                {{ Form::text('due_date', null, ['class' => 'datepicker-popup form-control installment-due-date', 'placeholder' => __('due_date'),'autocomplete'=>'off' ,'required']) }}
+                                                <input type="text" name="due_date" value="{{ old('due_date') }}" class="datepicker-popup form-control installment-due-date" placeholder="{{ __('due_date') }}" autocomplete="off" required>
                                             </div>
                                             <div class="form-group col-md-12 col-lg-2">
                                                 <label>{{ __('Due Charges Type') }} <span class="text-danger">*</span></label>
                                                 <div>
                                                     <div class="form-check form-check-inline my-0 d-flex">
                                                         <label class="form-check-label mr-2">
-                                                            {!! Form::radio('due_charges_type',"fixed" , false, ['class' => 'form-check-input fixed_due_charges_type', 'required' => true]) !!}
+                                                        <input type="radio" name="due_charges_type" value="fixed" class="form-check-input fixed_due_charges_type" required>
                                                             {{ __('Fixed Amount') }}
                                                             <i class="input-helper"></i>
                                                         </label>
@@ -146,7 +146,7 @@
                                                     </div>
                                                     <div class="form-check form-check-inline my-0 d-flex">
                                                         <label class="form-check-label mr-2">
-                                                            {!! Form::radio('due_charges_type', "percentage", true, ['class' => 'form-check-input percentage_due_charges_type', 'required' => true]) !!}
+                                                        <input type="radio" name="due_charges_type" value="percentage" class="form-check-input percentage_due_charges_type" required checked>
                                                             {{ __('Percentage') }}
                                                             <i class="input-helper"></i>
                                                         </label>
@@ -156,7 +156,7 @@
                                             </div>
                                             <div class="form-group col-lg-12 col-xl-3">
                                                 <label>{{ __('due_charges') }} <span class="text-danger">*</span></label>
-                                                {!! Form::text("due_charges",null, ["class" => "installment-due-charges form-control" , "placeholder" => trans('due_charges') , "required" => true , "data-convert" => "number", "min"=>0]) !!}
+                                                <input type="text" name="due_charges" value="{{ old('due_charges') }}" class="installment-due-charges form-control" placeholder="{{ trans('due_charges') }}" required data-convert="number" min="0">
                                             </div>
                                             <div class="form-group col-lg-12 col-xl-1 mt-4">
                                                 <button type="button" class="btn btn-inverse-danger btn-icon remove-installment-fee" data-repeater-delete>
@@ -197,7 +197,7 @@
                                             </div>
 
                                             <div class="form-group col-md-12 col-lg-3">
-                                                {!! Form::text('amount', null, ['class' => 'form-control amount','placeholder' => __('enter').' '.__('fees').' '.__('amount'),'id' => 'amount', 'required' => true, 'min' => 0, "data-convert" => "number"]) !!}
+                                            <input type="text" name="amount" id="amount" value="{{ old('amount') }}" class="form-control amount" placeholder="{{ __('enter') . ' ' . __('fees') . ' ' . __('amount') }}" required min="0" data-convert="number">
                                             </div>
 
                                             <div class="col-md-12 col-lg-1">

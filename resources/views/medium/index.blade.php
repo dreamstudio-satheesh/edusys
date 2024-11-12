@@ -24,7 +24,7 @@
                             <div class="row">
                                 <div class="form-group col-sm-6 col-md-12">
                                     <label>{{ __('name') }} <span class="text-danger">*</span></label>
-                                    {!! Form::text('name', null, ['required', 'placeholder' => __('name'), 'class' => 'form-control']) !!}
+                                    <input type="text" name="name" class="form-control" placeholder="{{ __('name') }}" required>
                                 </div>
                             </div>
                             <input class="btn btn-theme float-right" type="submit" value={{ __('submit') }}>
@@ -83,12 +83,7 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="name">{{ __('name') }} <span class="text-danger">*</span></label>
-                            {!! Form::text('name', null, [
-                                'required',
-                                'class' => 'form-control',
-                                'id' => 'name',
-                                'placeholder' => __('name'),
-                            ]) !!}
+                            <input type="text" name="name" id="name" class="form-control" placeholder="{{ __('name') }}" required>
                         </div>
                     </div>
                     <div class="modal-footer">

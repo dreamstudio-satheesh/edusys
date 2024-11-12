@@ -35,7 +35,7 @@
                                             </option>
                                         @endforeach
                                     </select>
-                                    {!! Form::hidden('class_section_id',"", ["id" => "class_section_id_value"]) !!}
+                                    <input type="hidden" name="class_section_id" id="class_section_id_value" value="">
                                 </div>
 
                                 <div class="form-group col-sm-12 col-md-6">
@@ -47,7 +47,7 @@
                                             <option value="{{ $item->class_subject_id }}" data-class-section="{{ $item->class_section_id }}">{{ $item->subject_with_name}}</option>
                                         @endforeach
                                     </select>
-                                    {!! Form::hidden('class_subject_id',"", ["id" => "class_subject_id_value"]) !!}
+                                    <input type="hidden" name="class_subject_id" id="class_subject_id_value" value="">
                                 </div>
 
                                 <div class="form-group col-sm-12 col-md-6">

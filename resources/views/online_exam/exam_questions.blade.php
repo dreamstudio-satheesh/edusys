@@ -51,7 +51,7 @@
                                         <div class="form-group col-lg-6 col-md-12" data-repeater-item>
                                             <label>{{ __('option') }} <span class="option-number">0</span> <span class="text-danger">*</span></label>
                                             <textarea class="editor_options" name="option" required placeholder="{{__('enter').' '.__('option')}}"></textarea>
-                                            {!! Form::hidden('number','', ['class'=>'option-number']) !!}
+                                            <input type="hidden" name="number" value="" class="option-number">
                                             <button type="button" class="btn btn-inverse-danger mt-2 btn-icon remove-option" data-repeater-delete>
                                                 <i class="fa fa-times"></i>
                                             </button>

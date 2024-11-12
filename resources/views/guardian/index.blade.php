@@ -24,36 +24,37 @@
             {{--                            <div class="row">--}}
             {{--                                <div class="form-group col-sm-12 col-md-6">--}}
             {{--                                    <label>{{ __('first_name') }} <span class="text-danger">*</span></label>--}}
-            {{--                                    {!! Form::text('first_name', null, ['required', 'placeholder' => __('first_name'), 'class' => 'form-control']) !!}--}}
+            {{--                                    <input type="text" name="first_name" class="form-control" placeholder="{{ __('first_name') }}" required> --}}
 
             {{--                                </div>--}}
             {{--                                <div class="form-group col-sm-12 col-md-6">--}}
             {{--                                    <label>{{ __('last_name') }} <span class="text-danger">*</span></label>--}}
-            {{--                                    {!! Form::text('last_name', null, ['required', 'placeholder' => __('last_name'), 'class' => 'form-control']) !!}--}}
+            {{--                                    <input type="text" name="last_name" class="form-control" placeholder="{{ __('last_name') }}" required>
             {{--                                </div>--}}
 
             {{--                                <div class="form-group col-sm-12 col-md-6">--}}
             {{--                                    <label>{{ __('email') }} <span class="text-danger">*</span></label>--}}
-            {{--                                    {!! Form::text('email', null, ['required', 'placeholder' => __('email'), 'class' => 'form-control']) !!}--}}
+            {{--                                    <input type="text" name="email" class="form-control" placeholder="{{ __('email') }}" required>
+
             {{--                                </div>--}}
 
 
             {{--                                <div class="form-group col-sm-12 col-md-6">--}}
             {{--                                    <label>{{ __('mobile') }} <span class="text-danger">*</span></label>--}}
-            {{--                                    {!! Form::number('mobile', null, ['required', 'placeholder' => __('mobile'), 'class' => 'form-control']) !!}--}}
+            {{--                                    <input type="number" name="mobile" class="form-control" placeholder="{{ __('mobile') }}" required>                --}}
             {{--                                </div>--}}
             {{--                                <div class="form-group col-sm-12 col-md-3">--}}
             {{--                                    <label>{{ __('gender') }} <span class="text-danger">*</span></label><br>--}}
             {{--                                    <div class="d-flex">--}}
             {{--                                        <div class="form-check form-check-inline">--}}
             {{--                                            <label class="form-check-label">--}}
-            {{--                                                {!! Form::radio('gender', 'male',true,  ['class' => 'form-check-input']) !!}--}}
+            {{--                                                <input type="radio" name="gender" value="male" class="form-check-input" checked>                --}}
             {{--                                                {{ __('male') }}--}}
             {{--                                            </label>--}}
             {{--                                        </div>--}}
             {{--                                        <div class="form-check form-check-inline">--}}
             {{--                                            <label class="form-check-label">--}}
-            {{--                                                {!! Form::radio('gender', 'female',false, ['class' => 'form-check-input']) !!}--}}
+            {{--                                              <input type="radio" name="gender" value="female" class="form-check-input">                --}}
             {{--                                                {{ __('female') }}--}}
             {{--                                            </label>--}}
             {{--                                        </div>--}}
@@ -120,22 +121,22 @@
                         <div class="row">
                             <div class="form-group col-sm-12 col-md-6">
                                 <label>{{ __('first_name') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('first_name', null, ['required', 'placeholder' => __('first_name'), 'class' => 'form-control', 'id' => 'first_name']) !!}
+                                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="{{ __('first_name') }}" required>
                             </div>
 
                             <div class="form-group col-sm-12 col-md-6">
                                 <label>{{ __('last_name') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('last_name', null, ['required', 'placeholder' => __('last_name'), 'class' => 'form-control', 'id' => 'last_name']) !!}
+                                <input type="text" name="last_name" id="last_name" class="form-control" placeholder="{{ __('last_name') }}" required>
                             </div>
 
                             <div class="form-group col-sm-12 col-md-6">
                                 <label>{{ __('email') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('email', null, ['required', 'placeholder' => __('email'), 'class' => 'form-control', 'id' => 'email']) !!}
+                                <input type="text" name="email" id="email" class="form-control" placeholder="{{ __('email') }}" required>
                             </div>
 
                             <div class="form-group col-sm-12 col-md-6">
                                 <label>{{ __('mobile') }} <span class="text-danger">*</span></label>
-                                {!! Form::number('mobile', null, ['required', 'placeholder' => __('mobile'), 'min' => 0 ,'class' => 'form-control', 'id' => 'mobile']) !!}
+                                <input type="number" name="mobile" id="mobile" class="form-control" placeholder="{{ __('mobile') }}" min="0" required>
                             </div>
 
                             <div class="form-group col-sm-12 col-md-12">
@@ -143,13 +144,13 @@
                                 <div class="d-flex">
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                            {!! Form::radio('gender', 'male', null, ['class' => 'form-check-input edit', 'id' => 'male']) !!}
+                                        <input type="radio" name="gender" value="male" class="form-check-input edit" id="male">
                                             {{ __('male') }}
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                            {!! Form::radio('gender', 'female', null, ['class' => 'form-check-input edit', 'id' => 'female']) !!}
+                                        <input type="radio" name="gender" value="female" class="form-check-input edit" id="female">
                                             {{ __('female') }}
                                         </label>
                                     </div>

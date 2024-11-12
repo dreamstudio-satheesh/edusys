@@ -30,7 +30,7 @@
                             </div>
                             <div class="form-group col-sm-12 col-md-4">
                                 {{-- <label>{{ __('date') }} <span class="text-danger">*</span></label> --}}
-                                {!! Form::text('date', null, ['required', 'placeholder' => __('date'), 'class' => 'datepicker-popup form-control','id'=>'date','data-date-end-date'=>"0d",'autocomplete'=>'off']) !!}
+                                <input type="text" name="date" id="date" value="{{ old('date') }}" required placeholder="{{ __('date') }}" class="datepicker-popup form-control" data-date-end-date="0d" autocomplete="off">
                                 <span class="input-group-addon input-group-append">
                             </span>
                             </div>

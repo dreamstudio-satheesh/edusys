@@ -24,11 +24,11 @@
                             <div class="row">
                                 <div class="form-group col-sm-12 col-md-4">
                                     <label>{{ __('title') }} <span class="text-danger">*</span></label>
-                                    {!! Form::text('title', null, ['required', 'placeholder' => __('title'), 'class' => 'form-control']) !!}
+                                    <input type="text" name="title" class="form-control" required placeholder="{{ __('title') }}">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-8">
                                     <label>{{ __('heading') }} <span class="text-danger">*</span></label>
-                                    {!! Form::text('heading', null, ['required', 'placeholder' => __('heading'), 'class' => 'form-control']) !!}
+                                    <input type="text" name="heading" class="form-control" required placeholder="{{ __('heading') }}">
                                 </div>
                             </div>
                             <hr>

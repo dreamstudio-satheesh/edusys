@@ -95,7 +95,7 @@
                                     <div class="col-lg-6">
                                         
                                         <div class="">
-                                            {!! Form::checkbox('trial_package', $trail_package, false, ['class' => 'm-1']) !!}
+                                            <input type="checkbox" name="trial_package" value="{{ $trail_package }}" class="m-1">
                                             {{ __('start_trial_package') }}
                                         </div>
                                         

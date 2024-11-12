@@ -18,7 +18,7 @@
                             <div class="row">
                                 <div class="form-group col-sm-12 col-md-4">
                                     <label>{{ __('name') }} <span class="text-danger">*</span></label>
-                                    {!! Form::text('name', null, ['required', 'placeholder' => __('name'), 'class' => 'form-control']) !!}
+                                    <input type="text" name="name" required placeholder="{{ __('name') }}" class="form-control">
                                 </div>
                                 <div class="form-group col-sm-12 col-md-4">
                                     <label for="start_month">{{ __('Start Month') }} <span class="text-danger">*</span></label>
@@ -118,7 +118,7 @@
                         <div class="row">
                             <div class="form-group col-12 col-sm-12 col-md-4">
                                 <label>{{ __('name') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('name', null, ['required', 'placeholder' => __('name'), 'class' => 'form-control', 'id' => 'edit-name']) !!}
+                                <input type="text" name="name" id="edit-name" required placeholder="{{ __('name') }}" class="form-control">
                             </div>
                             <div class="form-group col-sm-12 col-md-4">
                                 <label for="edit-start-month">{{ __('Start Month') }} <span class="text-danger">*</span></label>

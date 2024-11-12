@@ -25,11 +25,11 @@
                             <div class="row">
                                 <div class="form-group col-sm-12 col-md-6">
                                     <label for="">{{ __('title') }} <span class="text-danger">*</span></label>
-                                    {!! Form::text('title', null, ['required','class' => 'form-control','placeholder' => __('title')]) !!}
+                                    <input type="text" name="title" class="form-control" placeholder="{{ __('title') }}" required>
                                 </div>
                                 <div class="form-group col-sm-12 col-md-6">
                                     <label for="">{{ __('message') }} <span class="text-danger">*</span></label>
-                                    {!! Form::textarea('message', null, ['required','class' => 'form-control','placeholder' => __('message'), 'rows' => 3]) !!}
+                                    <textarea name="message" class="form-control" placeholder="{{ __('message') }}" rows="3" required></textarea>
                                 </div>
 
                                 <textarea name="all_users" id="" cols="30" rows="10" hidden>{{ $all_users }}</textarea>

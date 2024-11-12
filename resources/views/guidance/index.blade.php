@@ -25,11 +25,11 @@
                                 <div class="row">
                                     <div class="form-group col-sm-12 col-md-3">
                                         <label>{{ __('name') }} <span class="text-danger">*</span></label>
-                                        {!! Form::text('name', null, ['required', 'placeholder' => __('name'), 'class' => 'form-control', 'maxlength' => '30']) !!}
+                                        <input type="text" name="name" class="form-control" placeholder="{{ __('name') }}" maxlength="30" required>
                                     </div>
                                     <div class="form-group col-sm-12 col-md-9">
                                         <label>{{ __('link') }} <span class="text-danger">*</span></label>
-                                        {!! Form::text('link', null, ['required', 'placeholder' => __('link'), 'class' => 'form-control']) !!}
+                                        <input type="text" name="link" class="form-control" placeholder="{{ __('link') }}" required>
                                     </div>
                                 </div>
                                 <input class="btn btn-theme float-right ml-3" id="create-btn" type="submit" value={{ __('submit') }}>
@@ -98,13 +98,13 @@
                         <div class="row form-group">
                             <div class="col-sm-12 col-md-12">
                                 <label>{{ __('name') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('name', null, ['required', 'placeholder' => __('name'), 'class' => 'form-control', 'id' => 'edit-name', 'maxlength' => '30']) !!}
+                                <input type="text" name="name" id="edit-name" class="form-control" placeholder="{{ __('name') }}" maxlength="30" required>
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col-sm-12 col-md-12">
                                 <label>{{ __('link') }} <span class="text-danger">*</span></label>
-                                {!! Form::text('link', null, ['required','placeholder' => __('link'), 'class' => 'form-control', 'id' => 'edit-link']) !!}
+                                <input type="text" name="link" id="edit-link" class="form-control" placeholder="{{ __('link') }}" required>
                             </div>
                         </div>
                     </div>
