@@ -23,7 +23,7 @@ class SystemSettingRepository extends BaseRepository implements SystemSettingInt
     public function upsert(array $payload, array $uniqueColumns, array $updatingColumn): bool {
         foreach ($payload as $column => $value) {
             // Check that $value['data'] is File , Upload File
-            if ($value['data'] instanceof UploadedFile) {
+            if (is_array($value) && isset($value['data']) && $value['data'] instanceof UploadedFile) {
                 // Check the Data Exists
                 $dataExists = SystemSetting::where('name', $value['name'])->first();
                 if ($dataExists) {
