@@ -186,7 +186,7 @@
                     <div class="row">
                         <div class="col-md-12 col-lg-6">
                             <div class="flex_column_start">
-                                <span class="commonTitle">{{ $settings['system_name']  ?? 'eSchool SaaS' }}</span>
+                                <span class="commonTitle">{{ $settings['system_name']  ?? 'EduSys SaaS' }}</span>
                                 <span class="commonDesc">
                                     {{ $settings['tag_line'] }}
                                 </span>

@@ -51,7 +51,7 @@
                     <div class="col-xl-6 mx-auto">
                         @if (env('DEMO_MODE'))
                         <div class="alert alert-info text-center" role="alert">
-                            NOTE : <a target="_blank" href="https://eschool-saas.wrteam.me/login">-- Click Here --</a> if you cannot login.
+                            NOTE : <a target="_blank" href="https://EduSys-saas.wrteam.me/login">-- Click Here --</a> if you cannot login.
                         </div>
                         @endif
                         <div class="auth-form-light rounded-lg text-left p-5">

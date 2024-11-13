@@ -19,7 +19,7 @@
     <title>
         @yield('title') || 
         {{-- {{ config('app.name') }} --}}
-        {{ $systemSettings['system_name'] ?? 'eSchool - Saas' }}
+        {{ $systemSettings['system_name'] ?? 'EduSys - Saas' }}
     </title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @include('layouts.include')

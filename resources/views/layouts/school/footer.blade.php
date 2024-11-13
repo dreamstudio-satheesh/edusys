@@ -113,7 +113,7 @@
 
             <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="linksWrapper">
-                    <span class="title">Download eSchool Apps</span>
+                    <span class="title">Download EduSys Apps</span>
 
                     <div class="appContainer">
                         <a class="appWrapper" href="{{ $systemSettings['app_link'] ?? '' }}">

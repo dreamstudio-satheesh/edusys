@@ -157,7 +157,7 @@
                                 "key": "{{ $paymentConfiguration->api_key ?? '' }}", // Enter the Key ID generated from the Dashboard
                                 "amount": $('.bill_amount').val() * 100, // Amount is in currency subunits. Default currency is INR. Hence, 100 refers to 1 INR
                                 "currency": "{{ $system_settings['currency_code'] ?? 'INR' }}",
-                                "name": "{{ $system_settings['system_name'] ?? 'eSchool-Saas' }}",
+                                "name": "{{ $system_settings['system_name'] ?? 'EduSys-Saas' }}",
                                 "description": "Razorpay",
                                 "order_id": order_id,
                                 "handler": function(response) {

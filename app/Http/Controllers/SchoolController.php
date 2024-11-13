@@ -133,7 +133,7 @@ class SchoolController extends Controller {
             $email_body = $this->replacePlaceholders($request, $user, $settings);
 
             $data = [
-                'subject'     => 'Welcome to ' . $settings['system_name'] ?? 'eSchool Saas',
+                'subject'     => 'Welcome to ' . $settings['system_name'] ?? 'EduSys Saas',
                 'email'       => $request->admin_email,
                 'email_body'  => $email_body
             ];

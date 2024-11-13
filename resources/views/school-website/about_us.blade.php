@@ -27,7 +27,7 @@
                         <div class="flex_column_center">
                             <span class="commonTag"> {{ $schoolSettings['our_mission_section'] ?? 'Our Mission' }} </span>
                             <span class="commonTitle">
-                                {{ $schoolSettings['our_mission_title'] ?? 'Discover Our Mission for eSchool' }}
+                                {{ $schoolSettings['our_mission_title'] ?? 'Discover Our Mission for EduSys' }}
                             </span>
 
                             <span class="commonDesc">
