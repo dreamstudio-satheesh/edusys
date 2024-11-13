@@ -56,7 +56,7 @@
 
                             <div class="form-group col-sm-12 col-md-6">
                                 <label for="">{{ __('description') }}</label>
-                                <textarea name="description" class="form-control" placeholder="{{ __('description') }}" rows="3">value="{{ old('description', $package->description) }}"</textarea>
+                                <textarea name="description" class="form-control" placeholder="{{ __('description') }}" rows="3">{{ old('description', $package->description) }}"</textarea>
                             </div>
 
                             <div class="form-group col-sm-12 col-md-6">
@@ -78,7 +78,7 @@
                         <div class="form-group col-sm-12 col-md-2">
                             <label for="" class="staff-label">{{ __('per_active_staff_charges') }}</label>
                             <span class="text-danger">*</span>
-                            <input type="number" name="staff_charge" class="form-control staff-input" min="0" placeholder="{{ __('per_active_staff_charges') }}" required>
+                            <input type="number" name="staff_charge" class="form-control staff-input" min="0" placeholder="{{ __('per_active_staff_charges') }}"  value="{{ old('staff_charge', $package->staff_charge) }}" required>
                         </div> --}}
 
 
@@ -107,20 +107,20 @@
                                 <div class="form-group col-sm-12 col-md-6">
                                     <label for="" class="staff-label">{{ __('no_of_students') }} <span class="text-small text-info"> ({{ __('active') }})</span></label>
                                     <span class="text-danger">*</span>
-                                    <input type="number" name="no_of_students" class="form-control" min="1" placeholder="{{ __('no_of_students') }}" required>
+                                    <input type="number" name="no_of_students" class="form-control" min="1" placeholder="{{ __('no_of_students') }}"  value="{{ old('no_of_students', $package->no_of_students) }}" required>
                                 </div>
 
                                 <div class="form-group col-sm-12 col-md-6">
                                     <label for="" class="staff-label">{{ __('no_of_staffs') }} <span class="text-small text-info"> ({{ __('active') }})</span></label>
                                     <span class="text-danger">*</span>
-                                    <input type="number" name="no_of_staffs" class="form-control" min="1" placeholder="{{ __('no_of_staffs') }}" required>
+                                    <input type="number" name="no_of_staffs" class="form-control" min="1" placeholder="{{ __('no_of_staffs') }}"  value="{{ old('no_of_staffs', $package->no_of_staffs) }}" required>
                                 </div>
                             </div>
                         </div>
                         <div class="prepaid form-group col-sm-12 col-md-2" style="display: none">
                             <label for="" class="staff-label">{{ __('charges') }}</label>
                             <span class="text-danger">*</span>
-                            <input type="number" name="charges" class="form-control" min="1" placeholder="{{ __('charges') }}" required>
+                            <input type="number" name="charges" class="form-control" min="1" placeholder="{{ __('charges') }}"  value="{{ old('charges', $package->charges) }}" required>
                         </div>
 
                 </div>
