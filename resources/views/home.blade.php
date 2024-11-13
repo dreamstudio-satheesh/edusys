@@ -293,19 +293,22 @@
                 <div class="row counterBG">
                     <div class="col-4 col-sm-4 col-md-4 col-lg-4">
                         <div class="card">
-                            <div><span class="numb" data-target="{{ $counter['school'] }}">0</span><span>+</span></div>
+                            <!-- <div><span class="numb" data-target="{{ $counter['school'] }}">0</span><span>+</span></div> -->
+                            <div><span class="numb" data-target="10">0</span><span>+</span></div>
                             <div><span class="text">{{ __('schools') }}</span></div>
                         </div>
                     </div>
                     <div class="col-4 col-sm-4 col-md-4 col-lg-4">
                         <div class="card">
-                            <div><span class="numb" data-target="{{ $counter['teacher'] }}">0</span><span>+</span></div>
+                            <div><span class="numb" data-target="200">0</span><span>+</span></div>
+                            <!-- {{ $counter['teacher'] }} -->
                             <div><span class="text">{{ __('teachers') }}</span></div>
                         </div>
                     </div>
                     <div class="col-4 col-sm-4 col-md-4 col-lg-4">
                         <div class="card">
-                            <div><span class="numb" data-target="{{ $counter['student'] }}">0</span><span>+</span></div>
+                            <div><span class="numb" data-target="10000">0</span><span>+</span></div>
+                            <!-- {{ $counter['student'] }} -->
                             <div><span class="text">{{ __('students') }}</span></div>
                         </div>
                     </div>
