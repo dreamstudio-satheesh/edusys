@@ -36,13 +36,13 @@
                                 <div class="d-flex">
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                            <input type="radio" name="type" value="0" class="form-check-input package_type" id="prepaid">
+                                            <input type="radio" name="type" value="0" class="form-check-input package_type" id="prepaid" @if($package->type == 0) checked @endif>
                                             {{__("prepaid")}}
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                            <input type="radio" name="type" value="1" class="form-check-input package_type" id="postpaid">
+                                            <input type="radio" name="type" value="1" class="form-check-input package_type" id="postpaid" @if($package->type == 1) checked @endif>
                                             {{__("postpaid")}}
                                         </label>
                                     </div>
@@ -51,28 +51,28 @@
 
                             <div class="form-group col-sm-12 col-md-6">
                                 <label for="">{{ __('name') }} <span class="text-danger">*</span></label>
-                                <input type="text" name="name" class="form-control" placeholder="{{ __('package') . ' ' . __('name') }}" required>
+                                <input type="text" name="name" class="form-control" placeholder="{{ __('package') . ' ' . __('name') }}" value="{{ old('name', $package->name) }}" required>
                             </div>
 
                             <div class="form-group col-sm-12 col-md-6">
                                 <label for="">{{ __('description') }}</label>
-                                <textarea name="description" class="form-control" placeholder="{{ __('description') }}" rows="3"></textarea>
+                                <textarea name="description" class="form-control" placeholder="{{ __('description') }}" rows="3">value="{{ old('description', $package->description) }}"</textarea>
                             </div>
 
                             <div class="form-group col-sm-12 col-md-6">
                                 <label for="">{{ __('tagline') }}</label>
-                                <input type="text" name="tagline" class="form-control" placeholder="{{ __('tagline') }}">
+                                <input type="text" name="tagline" class="form-control" placeholder="{{ __('tagline') }}" value="{{ old('tagline', $package->tagline) }}">
                             </div>
 
                             <div class="form-group col-sm-12 col-md-2">
                                 <label for="" class="day-label">{{ __('days') }}</label> <span class="text-danger">*</span>
-                                <input type="number" name="days" class="form-control days" min="1" placeholder="{{ __('days') }}" required>
+                                <input type="number" name="days" class="form-control days" min="1" placeholder="{{ __('days') }}" value="{{ old('days', $package->days) }}" required>
                             </div>
 
                             {{-- <div class="form-group col-sm-12 col-md-2">
                                 <label for="" class="student-label">{{ __('per_active_student_charges') }}</label>
                             <span class="text-danger">*</span>
-                            <input type="number" name="student_charge" class="form-control student-input" min="0" placeholder="{{ __('per_active_student_charges') }}" required>
+                            <input type="number" name="student_charge" class="form-control student-input" min="0" placeholder="{{ __('per_active_student_charges') }}" value="{{ old('student_charge', $package->student_charge) }}" required>
                         </div>
 
                         <div class="form-group col-sm-12 col-md-2">
