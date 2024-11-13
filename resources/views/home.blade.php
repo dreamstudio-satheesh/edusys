@@ -300,7 +300,7 @@
                     </div>
                     <div class="col-4 col-sm-4 col-md-4 col-lg-4">
                         <div class="card">
-                            <div><span class="numb" data-target="200">0</span><span>+</span></div>
+                            <div><span class="numb" data-target="400">0</span><span>+</span></div>
                             <!-- {{ $counter['teacher'] }} -->
                             <div><span class="text">{{ __('teachers') }}</span></div>
                         </div>
