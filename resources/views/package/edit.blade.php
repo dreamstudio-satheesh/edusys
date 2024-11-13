@@ -56,7 +56,7 @@
 
                             <div class="form-group col-sm-12 col-md-6">
                                 <label for="">{{ __('description') }}</label>
-                                <textarea name="description" class="form-control" placeholder="{{ __('description') }}" rows="3">{{ old('description', $package->description) }}"</textarea>
+                                <textarea name="description" class="form-control" placeholder="{{ __('description') }}" rows="3">{{ old('description', $package->description) }}</textarea>
                             </div>
 
                             <div class="form-group col-sm-12 col-md-6">
