@@ -78,7 +78,7 @@ class StudentController extends Controller {
 
     public function store(Request $request) {
         ResponseService::noPermissionThenRedirect(['student-create']);
-        ResponseService::errorResponse("hello world");
+        
         $request->validate([
             'first_name'          => 'required',
             'last_name'           => 'required',
@@ -128,7 +128,7 @@ class StudentController extends Controller {
                     }
                 }
             }
-
+            ResponseService::errorResponse("hello world");
             // Get the user details from the guardian details & identify whether that user is guardian or not. if not the guardian and has some other role then show appropriate message in response
             $guardianUser = $this->user->builder()->whereHas('roles', function ($q) {
                 $q->where('name', '!=', 'Guardian');
