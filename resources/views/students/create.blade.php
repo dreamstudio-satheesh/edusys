@@ -198,7 +198,7 @@
                                 <div class="form-group col-sm-12 col-md-12">
                                     <label for="guardian_email">{{ __('guardian') . ' ' . __('email') }} <span class="text-danger">*</span></label>
                                     <!-- <select class="guardian-search form-control guardian_email" id="guardian_email"></select> -->
-                                    <input type="text" name="guardian_email class="form-control" >
+                                    <input type="text" name="guardian_email" class="form-control" id="guardian_email">
                                 </div>
 
                                 <div class="form-group col-sm-12 col-md-12 col-lg-6 col-xl-4">
