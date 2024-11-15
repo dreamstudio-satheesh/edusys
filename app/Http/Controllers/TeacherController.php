@@ -159,8 +159,8 @@ class TeacherController extends Controller {
             }
 
             DB::commit();
-            $sendEmail = app(UserService::class);
-            $sendEmail->sendStaffRegistrationEmail($user, $teacher_plain_text_password);
+           /*  $sendEmail = app(UserService::class);
+            $sendEmail->sendStaffRegistrationEmail($user, $teacher_plain_text_password); */
             
             ResponseService::successResponse('Data Stored Successfully');
         } catch (Throwable $e) {
