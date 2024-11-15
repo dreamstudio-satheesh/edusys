@@ -78,6 +78,7 @@ class StudentController extends Controller {
 
     public function store(Request $request) {
         ResponseService::noPermissionThenRedirect(['student-create']);
+        ResponseService::errorResponse("hello world");
         $request->validate([
             'first_name'          => 'required',
             'last_name'           => 'required',
