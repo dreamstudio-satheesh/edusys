@@ -128,7 +128,7 @@ class StudentController extends Controller {
                     }
                 }
             }
-            ResponseService::errorResponse("hello world");
+           
             // Get the user details from the guardian details & identify whether that user is guardian or not. if not the guardian and has some other role then show appropriate message in response
             $guardianUser = $this->user->builder()->whereHas('roles', function ($q) {
                 $q->where('name', '!=', 'Guardian');
@@ -141,7 +141,7 @@ class StudentController extends Controller {
             $guardian = $userService->createOrUpdateParent($request->guardian_first_name, $request->guardian_last_name, $request->guardian_email, $request->guardian_mobile, $request->guardian_gender, $request->guardian_image);
 
             $userService->createStudentUser($request->first_name, $request->last_name, $request->admission_no, $request->mobile, $request->dob, $request->gender, $request->image, $request->class_section_id, $request->admission_date, $request->current_address, $request->permanent_address, $sessionYear->id, $guardian->id, $request->extra_fields ?? [], $request->status ?? 0);
-
+            ResponseService::errorResponse("2hello world2");
             DB::commit();
             ResponseService::successResponse('Data Stored Successfully');
         } catch (Throwable $e) {
