@@ -136,13 +136,13 @@ class StudentController extends Controller {
             if ($guardianUser) {
                 ResponseService::errorResponse("Email ID is already taken for Other Role");
             }
-            ResponseService::errorResponse("2hello world2");
+           
             $userService = app(UserService::class);
             $sessionYear = $this->sessionYear->findById($request->session_year_id);
             $guardian = $userService->createOrUpdateParent($request->guardian_first_name, $request->guardian_last_name, $request->guardian_email, $request->guardian_mobile, $request->guardian_gender, $request->guardian_image);
 
             $userService->createStudentUser($request->first_name, $request->last_name, $request->admission_no, $request->mobile, $request->dob, $request->gender, $request->image, $request->class_section_id, $request->admission_date, $request->current_address, $request->permanent_address, $sessionYear->id, $guardian->id, $request->extra_fields ?? [], $request->status ?? 0);
-           
+           //stopped send email UserService 
             DB::commit();
             ResponseService::successResponse('Data Stored Successfully');
         } catch (Throwable $e) {

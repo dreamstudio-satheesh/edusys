@@ -159,7 +159,7 @@ class UserService {
 
         $guardian = $this->user->guardian()->where('id', $guardianID)->firstOrFail();
         $parentPassword = $this->makeParentPassword($guardian->mobile);
-        $this->sendRegistrationEmail($guardian, $user, $student->admission_no, $password);
+       // $this->sendRegistrationEmail($guardian, $user, $student->admission_no, $password);
         return $user;
     }
 
