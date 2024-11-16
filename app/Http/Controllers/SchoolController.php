@@ -138,9 +138,9 @@ class SchoolController extends Controller {
                 'email_body'  => $email_body
             ];
 
-           /*  Mail::send('schools.email', $data, static function ($message) use ($data) {
+            Mail::send('schools.email', $data, static function ($message) use ($data) {
                 $message->to($data['email'])->subject($data['subject']);
-            }); */
+            });
 
             ResponseService::successResponse('Data Stored Successfully');
 
