@@ -5,7 +5,7 @@ yarn-error.log
 
 storage/*.key
 /storage/pail
-storage/framework/views/
+storage/framework/views/*
 .env
 composer.lock
 Homestead.yaml
