@@ -8,10 +8,7 @@ storage/*.key
 storage/framework/views/*
 .env
 composer.lock
-Homestead.yaml
-Homestead.json
-/.vagrant
-.phpunit.result.cache
+
 /.idea/*
 /storage/installed
 
