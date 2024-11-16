@@ -38,7 +38,8 @@ a {
 
 .logo {
     width: auto;
-    height: 50px;
+    padding-top: 8px;
+    height: 60px;
 }
 
 .navbar .menuListWrapper {
