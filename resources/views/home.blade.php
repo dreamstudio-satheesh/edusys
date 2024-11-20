@@ -715,6 +715,14 @@
                                     <div>
                                         <span>{{ __('location') }}</span>
                                         <span>{{ $settings['address'] ?? '' }}</span>
+                                    </div>
+                                </div>
+                                <div class="infoWrapper">
+                                    <div>
+                                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                                    </div>
+                                    <div>
+                                        <span>{{ __('location') }}</span>
                                         <span>No. 76, VGN Nagar kattupakkam, Chennai - 600056 , Tamilnadu.</span>
                                     </div>
                                 </div>
